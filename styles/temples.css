@@ -9,10 +9,11 @@
   --menu-bg: #111827;
   --header-text: #ffffff;
   --accent: #1d4ed8;
+  --accent-on-dark: #93c5fd;
   --body-bg: #f3f4f6;
   --card-bg: #ffffff;
   --text: #1f2937;
-  --caption-color: #6b7280;
+  --caption-color: #565f6b;
 }
 
 body {
@@ -60,7 +61,7 @@ body {
 }
 
 #menu.open {
-  color: var(--accent);
+  color: var(--accent-on-dark);
 }
 
 #menu.open::before {
@@ -106,7 +107,7 @@ nav {
 
 .navigation a:hover {
   background-color: var(--header-bg);
-  color: var(--accent);
+  color: var(--accent-on-dark);
   /* padding-left: 1.5rem; */
 }
 
@@ -117,7 +118,7 @@ nav {
   bottom: 0.4rem;
   width: 0;
   height: 2px;
-  background-color: var(--accent);
+  background-color: var(--accent-on-dark);
   /* transition: width 0.3s ease, left 0.3s ease; */
 }
 
@@ -127,7 +128,7 @@ nav {
 }
 
 .active {
-  color: var(--accent) !important;
+  color: var(--accent-on-dark) !important;
 }
 
 /* 📍 wayfinding symbol */
