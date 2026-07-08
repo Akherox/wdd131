@@ -14,7 +14,9 @@
 
   nav {
     width: auto;
+    display: flex;
   }
+
 
   .navigation {
     flex-direction: row;
