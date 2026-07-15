@@ -12,6 +12,7 @@
   --body-bg: #f3f4f6;
   --card-bg: #ffffff;
   --text: #1f2937;
+  --accent-on-dark: #93c5fd;
 }
 
 body {
@@ -56,12 +57,12 @@ header {
 
 .navigation a:hover {
   text-decoration: overline;
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--accent-on-dark);
   color: #ffffff;
 }
 
 .active {
-  color: var(--accent) !important;
+  color: var(--accent-on-dark) !important;
 }
 
 main {
@@ -124,8 +125,10 @@ main h1 {
 
 .profile-photo {
   width: 120px;
+  aspect-ratio: 4 / 5;
   height: auto;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 .flag {
@@ -135,7 +138,9 @@ main h1 {
 
 .flag img {
   width: 100%;
+  aspect-ratio: 3 / 2;
   border: 1px solid #ddd;
+  object-fit: cover;
 }
 
 .flag figcaption {

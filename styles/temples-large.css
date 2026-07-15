@@ -35,7 +35,7 @@
 
   .navigation a:hover {
     background-color: transparent;
-    color: var(--accent);
+    color: var(--accent-on-dark);
     padding-left: 0.25rem;
   }
 
