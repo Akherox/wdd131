@@ -4,15 +4,14 @@
     font-size: 1.8rem;
   }
 
-  /* Hero becomes a stage: Data and Weather cards float on top of the image */
-  .hero {
+  /* .hero {
     display: block;
-  }
+  } */
 
   .card {
     position: absolute;
     max-width: 260px;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     border-bottom: none;
@@ -37,12 +36,18 @@
   .weather-heading {
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     gap: 0.5rem;
-    margin-bottom: 0.5rem;
   }
 
   .weather-icon {
-    width: 1.75rem;
-    margin: 0;
+    display: none !important;
+  }
+
+  .weather-heading::after {
+    content: '☀️';
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+    vertical-align: middle;
   }
 }
