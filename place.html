@@ -24,13 +24,19 @@
 <body>
     <header class="body-header">
         <span id="course-title">Brazil</span>
+        <button id="menu" aria-label="Toggle navigation menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active" title="Home">Home</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <div class="hero">
             <picture>
-                <source srcset="images/hero-desktop.webp" media="(min-width: 600px)">
-                <img src="./images/hero-mobile.webp" alt="Christ the Redeemer statue overlooking Rio de Janeiro, Brazil"
+                <source srcset="images/hero-mobile.webp" media="(min-width: 800px)">
+                <img src="./images/hero-desktop.webp" alt="Christ the Redeemer statue overlooking Rio de Janeiro, Brazil"
                     width="1600" height="900">
             </picture>
 
@@ -61,15 +67,21 @@
                         <dt>Time Zone:</dt>
                         <dd>UTC-3</dd>
                     </div>
+                    <div class="row">
+                        <dt>Calling Code:</dt>
+                        <dd>+55</dd>
+                    </div>
+                    <div class="row">
+                        <dt>Internet TLD:</dt>
+                        <dd>.br</dd>
+                    </div>
                 </dl>
             </section>
 
             <section class="card card-weather">
-                <div class="weather-heading">
-                    <h2>Weather</h2>
-                    <img class="weather-icon" src="./images/weather-icon.svg" alt="Partly sunny weather icon" width="40"
-                        height="40">
-                </div>
+                <h2 class="weather-heading">Weather</h2>
+                <img class="weather-icon" src="./images/weather-icon.svg" alt="Partly sunny weather icon" width="60"
+                    height="60">
                 <dl>
                     <div class="row">
                         <dt>Temperature:</dt>

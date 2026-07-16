@@ -1,0 +1,48 @@
+@media (min-width: 37.5em) {
+
+  #course-title {
+    font-size: 1.8rem;
+  }
+
+  /* Hero becomes a stage: Data and Weather cards float on top of the image */
+  .hero {
+    display: block;
+  }
+
+  .card {
+    position: absolute;
+    max-width: 260px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+    padding: 1rem;
+  }
+
+  .card h2 {
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-data {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .card-weather {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .weather-heading {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .weather-icon {
+    width: 1.75rem;
+    margin: 0;
+  }
+}
