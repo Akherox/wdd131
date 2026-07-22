@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load - WDD 131 - Bryan Bravo</title>
+    <meta name="description"
+        content="A demonstration of native browser lazy loading for images, built for WDD 131 - Dynamic Web Fundamentals, by Bryan Bravo.">
+    <meta name="author" content="Bryan Bravo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/lazyload.css">
+
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+
+<body>
+    <header class="body-header">
+        <h1 id="course-title">Lazy Load</h1>
+    </header>
+
+    <main>
+        <img src="./images/cat-1.jpg" alt="Black and white tuxedo cat sitting upright on a bed, looking off to the side"
+            width="400" height="600" loading="lazy">
+        <img src="./images/cat-2.jpg" alt="Gray cat lying down with paw extended, looking directly at the camera"
+            width="400" height="600" loading="lazy">
+        <img src="./images/cat-3.jpg" alt="Black and white kitten with tail raised, looking up at the camera"
+            width="400" height="600" loading="lazy">
+        <img src="./images/cat-4.jpg" alt="Gray cat wearing a knitted scarf, sitting near a window" width="400"
+            height="600" loading="lazy">
+        <img src="./images/cat-5.jpg" alt="Orange and white kitten curled up, looking at the camera" width="400"
+            height="600" loading="lazy">
+        <img src="./images/cat-6.jpg"
+            alt="Close-up of a white fluffy cat lying down with paw stretched toward the camera" width="400"
+            height="600" loading="lazy">
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Bryan Bravo</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

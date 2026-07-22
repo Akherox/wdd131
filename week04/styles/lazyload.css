@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-bg: #1f2937;
+  --header-text: #ffffff;
+  --body-bg: #f3f4f6;
+  --text: #1f2937;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.body-header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+#course-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+img {
+  width: 400px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+}
+
+main img.loaded {
+  animation: fadeFromBlack 0.8s ease-in forwards;
+}
+
+@keyframes fadeFromBlack {
+  0% {
+    opacity: 0;
+    filter: brightness(0);
+  }
+
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 1rem;
+}
+
+#lastModified {
+  font-size: 0.85rem;
+}
