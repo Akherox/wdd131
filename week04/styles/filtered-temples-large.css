@@ -1,0 +1,54 @@
+@media (min-width: 37.5em) {
+
+  #course-title {
+    font-size: 1.8rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .body-header {
+    justify-content: space-between;
+  }
+
+  nav {
+    width: auto;
+    display: flex;
+  }
+
+  .navigation {
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    overflow: visible;
+    max-height: none;
+  }
+
+  .navigation button {
+    display: block;
+    flex: 1 1 100%;
+    color: var(--header-text);
+    padding: 0.5rem 0.25rem;
+  }
+
+  .navigation button:hover {
+    background-color: transparent;
+    color: var(--accent-on-dark);
+    padding-left: 0.25rem;
+  }
+
+  .navigation button::after {
+    bottom: -2px;
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
