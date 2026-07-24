@@ -25,20 +25,20 @@
     max-height: none;
   }
 
-  .navigation button {
+  .navigation a {
     display: block;
     flex: 1 1 100%;
     color: var(--header-text);
     padding: 0.5rem 0.25rem;
   }
 
-  .navigation button:hover {
+  .navigation a:hover {
     background-color: transparent;
     color: var(--accent-on-dark);
     padding-left: 0.25rem;
   }
 
-  .navigation button::after {
+  .navigation a::after {
     bottom: -2px;
   }
 

@@ -94,7 +94,7 @@ nav {
   max-height: 20rem;
 }
 
-.navigation button {
+.navigation a {
   display: block;
   width: 100%;
   position: relative;
@@ -110,12 +110,12 @@ nav {
   transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
 }
 
-.navigation button:hover {
+.navigation a:hover {
   background-color: var(--header-bg);
   color: var(--accent-on-dark);
 }
 
-.navigation button::after {
+.navigation a::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -125,7 +125,7 @@ nav {
   background-color: var(--accent-on-dark);
 }
 
-.navigation button:hover::after {
+.navigation a:hover::after {
   width: 40%;
   left: 30%;
 }
@@ -152,8 +152,6 @@ main h2 {
   margin-bottom: 0.5rem;
 }
 
-/* Lets #temple-gallery hand its children straight to main's grid,
-   the same trick used for .row inside <dl> on other pages */
 #temple-gallery {
   display: contents;
 }

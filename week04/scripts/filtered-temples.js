@@ -95,9 +95,8 @@ const temples = [
 
 const gallery = document.getElementById('temple-gallery');
 const galleryHeading = document.getElementById('gallery-heading');
-const navButtons = document.querySelectorAll('.navigation button');
+const navLinks = document.querySelectorAll('.navigation a');
 
-// Pulls the dedication year out of a "YYYY, Month, Day" string
 function getDedicatedYear(dedicated) {
   return parseInt(dedicated.split(',')[0], 10);
 }
@@ -110,8 +109,6 @@ const filters = {
   small: () => temples.filter((t) => t.area < 10000)
 };
 
-// Clears the gallery and builds one card per temple in the filtered list
-// (single-function pattern from the "Developing an Array Filter" demo)
 function createTempleCard(filteredTemples) {
   gallery.innerHTML = '';
 
@@ -143,20 +140,20 @@ function createTempleCard(filteredTemples) {
   });
 }
 
-navButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    navButtons.forEach((b) => b.classList.remove('active'));
-    button.classList.add('active');
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
 
-    const filterKey = button.dataset.filter;
-    galleryHeading.textContent = button.title;
+    navLinks.forEach((l) => l.classList.remove('active'));
+    link.classList.add('active');
+
+    const filterKey = link.dataset.filter;
+    galleryHeading.textContent = link.title;
     createTempleCard(filters[filterKey]());
 
-    // Collapse the mobile menu after choosing a filter
     navigation.classList.remove('open');
     hamButton.classList.remove('open');
   });
 });
 
-// Initial render: show all temples on load
 createTempleCard(temples);
