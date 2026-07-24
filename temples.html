@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brazil - WDD 131 - Bryan Bravo</title>
+    <title>Temple Album - WDD 131 - Bryan Bravo</title>
     <meta name="description"
-        content="A country profile page for Brazil, built for WDD 131 - Dynamic Web Fundamentals, by Bryan Bravo. Includes country data and current weather conditions.">
+        content="Temple Album page for WDD 131 - Dynamic Web Fundamentals, by Bryan Bravo. A responsive gallery of temple photos.">
     <meta name="author" content="Bryan Bravo">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,85 +15,78 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/place.css">
-    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
 
-    <script src="scripts/place.js" defer></script>
+    <script src="scripts/temples.js" defer></script>
 </head>
 
 <body>
     <header class="body-header">
-        <span id="course-title">Brazil</span>
+        <span id="course-title">Temple Album</span>
+        <button id="menu" aria-label="Toggle navigation menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active" title="Home">Home</a></li>
+                <li><a href="#" title="Old">Old</a></li>
+                <li><a href="#" title="New">New</a></li>
+                <li><a href="#" title="Large">Large</a></li>
+                <li><a href="#" title="Small">Small</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="hero">
-            <picture>
-                <source srcset="images/hero-desktop.webp" media="(min-width: 600px)">
-                <img src="./images/hero-mobile.webp" alt="Christ the Redeemer statue overlooking Rio de Janeiro, Brazil"
-                    width="1600" height="900">
-            </picture>
+        <h1>Home</h1>
 
-            <section class="card card-data">
-                <h2>Data</h2>
-                <dl>
-                    <div class="row">
-                        <dt>Area:</dt>
-                        <dd>8,515,767 sq km</dd>
-                    </div>
-                    <div class="row">
-                        <dt>Population:</dt>
-                        <dd>203,080,756</dd>
-                    </div>
-                    <div class="row">
-                        <dt>Capital:</dt>
-                        <dd>Bras&iacute;lia</dd>
-                    </div>
-                    <div class="row">
-                        <dt>Languages:</dt>
-                        <dd>Portuguese</dd>
-                    </div>
-                    <div class="row">
-                        <dt>Currency:</dt>
-                        <dd>Brazilian Real</dd>
-                    </div>
-                    <div class="row">
-                        <dt>Time Zone:</dt>
-                        <dd>UTC-3</dd>
-                    </div>
-                </dl>
-            </section>
+        <figure>
+            <img src="./images/temple-small.jpeg" alt="The Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana</figcaption>
+        </figure>
 
-            <section class="card card-weather">
-                <div class="weather-heading">
-                    <h2>Weather</h2>
-                    <img class="weather-icon" src="./images/weather-icon.svg" alt="Partly sunny weather icon" width="40"
-                        height="40">
-                </div>
-                <dl>
-                    <div class="row">
-                        <dt>Temperature:</dt>
-                        <dd id="temperature">28 &deg;C</dd>
-                    </div>
-                    <div class="row">
-                        <dt>Conditions:</dt>
-                        <dd id="conditions">Sunny</dd>
-                    </div>
-                    <div class="row">
-                        <dt>Wind:</dt>
-                        <dd id="wind">12 km/h</dd>
-                    </div>
-                    <div class="row">
-                        <dt>Wind Chill:</dt>
-                        <dd id="windChill">N/A</dd>
-                    </div>
-                </dl>
-            </section>
-        </div>
+        <figure>
+            <img src="./images/temple-small.jpeg" alt="The Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./images/temple-small.jpeg" alt="The Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./images/temple-small.jpeg" alt="The Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./images/temple-small.jpeg" alt="The Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./images/temple-small.jpeg" alt="The Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./images/temple-small.jpeg" alt="The Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./images/temple-small.jpeg" alt="The Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./images/temple-small.jpeg" alt="The Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana</figcaption>
+        </figure>
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> Bryan Bravo, Brazil</p>
+        <p>&copy; <span id="currentyear"></span> Bryan Bravo</p>
         <p id="lastModified"></p>
     </footer>
 </body>
