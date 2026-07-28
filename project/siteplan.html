@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Planning Document - WDD 131 - Bryan Bravo</title>
+    <meta name="description"
+        content="Website planning document for the ReelKeeper final project, WDD 131 - Dynamic Web Fundamentals, by Bryan Bravo. Covers site name, purpose, scenarios, color schema, typography, and wireframes.">
+    <meta name="author" content="Bryan Bravo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/siteplan-large.css">
+
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+
+<body>
+    <header class="body-header">
+        <span class="logo">&#127909; ReelKeeper</span>
+        <h1>Website Planning Document</h1>
+    </header>
+
+    <main>
+
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <p><strong>ReelKeeper</strong></p>
+            <p>The name combines "reel" &mdash; a nod to classic film reels and the cinema experience &mdash; with
+                "keeper," reflecting the site's core feature: keeping track of favorite movies and a personal
+                watchlist. It's short, memorable, and ties directly to the site's purpose rather than reading like a
+                generic movie database name.</p>
+            <p><em>Optional domain availability: reelkeeper.dev</em></p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>The site provides a personal, curated guide to movies I love and want to watch. It offers short
+                reviews and ratings for favorite films, organized so visitors can browse by genre, and a watchlist
+                feature that lets a visitor save movies to watch later, with the list persisting between visits.</p>
+        </section>
+
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <p>Questions a visitor might ask that the site's content should answer:</p>
+            <ul>
+                <li>What are some highly-rated drama movies I should watch this year?</li>
+                <li>How do I save a movie to my watchlist so I remember to watch it later?</li>
+                <li>Which of the featured movies are similar to films I've already marked as favorites?</li>
+            </ul>
+        </section>
+
+        <section id="color-schema">
+            <h2>Color Schema</h2>
+            <p>This palette follows the color-psychology guide linked in the assignment. Red is the main color
+                because the guide describes it as urgency, excitement, and energy, which fits a movie site. Red is
+                only used for headings and small accents, not for large blocks of text, since the guide says
+                colored type should be kept for links and important information.</p>
+            <p>The background is dark instead of the more common off-white option. The same guide also lists black
+                as elegant and common in premium brands, which is closer to the mood I want for a movie site than
+                a plain white background would be. Gold is not a strict color-wheel complement to red, but it is a
+                warm color that sits near it and still stands out against the dark background, which is what the
+                guide says the second color should do. All the combinations below were checked with a contrast
+                calculator against the WCAG AA minimum (4.5:1 for normal text).</p>
+            <div class="color-swatches">
+                <div class="swatch">
+                    <span class="swatch-color swatch-black"></span>
+                    <span class="swatch-info"><strong>Cinema Black &mdash; #141414</strong><span>Page
+                            background</span></span>
+                </div>
+                <div class="swatch">
+                    <span class="swatch-color swatch-surface"></span>
+                    <span class="swatch-info"><strong>Surface &mdash; #232323</strong><span>Card / section
+                            backgrounds</span></span>
+                </div>
+                <div class="swatch">
+                    <span class="swatch-color swatch-cream"></span>
+                    <span class="swatch-info"><strong>Cream &mdash; #f5f2ea</strong><span>Body text</span></span>
+                </div>
+                <div class="swatch">
+                    <span class="swatch-color swatch-red"></span>
+                    <span class="swatch-info"><strong>Cinema Red &mdash; #f13c50</strong><span>Headings, section
+                            accent borders</span></span>
+                </div>
+                <div class="swatch">
+                    <span class="swatch-color swatch-gold"></span>
+                    <span class="swatch-info"><strong>Marquee Gold &mdash; #e8b923</strong><span>Links, buttons,
+                            active nav state</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="typography">
+            <h2>Typography</h2>
+            <p>The font pairing follows the advice in the Google Fonts guide linked in the assignment: use one font
+                with personality for headings and a plain, familiar font for body text. Oswald is bold and
+                condensed, which fits the guide's notes on display fonts for short titles. Open Sans is used for
+                paragraphs and labels because it stays readable at small sizes and is already used on other pages
+                for this course, so the styling stays consistent across assignments.</p>
+            <div class="font-sample">
+                <p class="sample-heading">Oswald &mdash; Headings (h1&ndash;h3)</p>
+                <p class="sample-body">Bold, condensed letterforms similar to what you'd see on a movie poster.
+                    Used for page titles, section headings, and card titles.</p>
+            </div>
+            <div class="font-sample">
+                <p class="sample-body sample-body-lead">Open Sans &mdash; Body text, labels, navigation
+                </p>
+                <p class="sample-body">A plain, readable sans-serif used for paragraphs, reviews, form labels, and
+                    navigation links.</p>
+            </div>
+        </section>
+
+        <section id="wireframes">
+            <h2>Wireframes</h2>
+            <p>Rough layout sketches of the home page in mobile and desktop viewports. Boxes represent content
+                blocks, not final visuals.</p>
+            <div class="wireframes">
+                <figure class="wireframe-block mobile">
+                    <img src="images/wireframe-mobile.jpg"
+                        alt="Wireframe sketch of the ReelKeeper home page on a mobile viewport: collapsed header with logo and hamburger menu, a full-width hero image block, and three stacked featured movie cards each with a thumbnail, title, description lines, and a watchlist button, followed by a footer bar."
+                        loading="lazy" width="320" height="620">
+                    <figcaption>Mobile layout (single column, stacked)</figcaption>
+                </figure>
+                <figure class="wireframe-block desktop">
+                    <img src="images/wireframe-desktop.jpg"
+                        alt="Wireframe sketch of the ReelKeeper home page on a desktop viewport: header with logo and horizontal navigation, a two-column hero section with an image and intro text with a call-to-action button, and a three-column grid of featured movie cards, followed by a footer bar."
+                        loading="lazy" width="800" height="520">
+                    <figcaption>Desktop layout (multi-column grid)</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Bryan Bravo, ReelKeeper</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
