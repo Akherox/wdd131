@@ -1,9 +1,7 @@
-// Footer: copyright year + last modified (same pattern used across the course)
 document.getElementById('currentyear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent =
   `Last Modification: ${document.lastModified}`;
 
-// Product data source (normally this would come from an external API/JSON file)
 const products = [
   {
     id: 'fc-1888',
@@ -32,8 +30,6 @@ const products = [
   },
 ];
 
-// Build the <option> elements dynamically from the products array.
-// Displayed text = product name, value = product id (per assignment spec).
 const productSelect = document.getElementById('product');
 
 products.forEach((product) => {

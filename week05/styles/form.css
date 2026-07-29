@@ -14,6 +14,7 @@
   --primary: #0f5132;
   --primary-hover: #0b3d26;
   --focus-ring: #1a73e8;
+  --white: #ffffff;
 
   --font-display: "Libre Franklin", sans-serif;
   --font-body: "Source Sans 3", sans-serif;
@@ -29,7 +30,7 @@ body {
   flex-direction: column;
 }
 
-/* ---------- Header ---------- */
+/* Header */
 
 .body-header {
   padding: 2.5rem 1.5rem 2rem;
@@ -52,7 +53,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* ---------- Layout ---------- */
+/* Layout */
 
 main {
   flex: 1;
@@ -97,7 +98,7 @@ legend {
   font-size: 0.82rem;
 }
 
-/* ---------- Inputs ---------- */
+/* Inputs */
 
 select,
 input[type="date"],
@@ -131,13 +132,13 @@ textarea:focus-visible {
   border-color: var(--focus-ring);
 }
 
-/* ---------- Star rating ---------- */
+/* Star rating */
 
 .stars {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  gap: 0.3rem;
+  /* gap: 0.3rem; */
   width: fit-content;
 }
 
@@ -150,17 +151,27 @@ textarea:focus-visible {
 
 .stars label {
   margin: 0;
+  width: 1.9rem;
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.9rem;
   line-height: 1;
-  color: var(--border);
+  color: var(--primary);
   cursor: pointer;
-  transition: color 0.15s ease;
 }
 
-.stars label:hover,
-.stars label:hover~label,
-.stars input:checked~label {
-  color: var(--primary);
+.stars label::before {
+  content: "\2606";
+  /* empty star ☆ */
+}
+
+.stars input:checked~label::before,
+.stars label:hover::before,
+.stars label:hover~label::before {
+  content: "\2605";
+  /* filled star ★ */
 }
 
 .stars input:focus-visible+label {
@@ -169,7 +180,7 @@ textarea:focus-visible {
   border-radius: 4px;
 }
 
-/* ---------- Checkboxes ---------- */
+/* Checkboxes */
 
 .checkbox-grid {
   display: grid;
@@ -194,13 +205,13 @@ textarea:focus-visible {
   font-weight: 500;
 }
 
-/* ---------- Submit button ---------- */
+/* Submit button */
 
 input[type="submit"] {
   width: 100%;
   padding: 0.85rem;
   background-color: var(--primary);
-  color: #ffffff;
+  color: var(--white);
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1rem;
@@ -219,7 +230,7 @@ input[type="submit"]:focus-visible {
   outline-offset: 2px;
 }
 
-/* ---------- Confirmation page ---------- */
+/* Review page */
 
 .confirmation-card {
   text-align: center;
@@ -275,7 +286,7 @@ input[type="submit"]:focus-visible {
   display: inline-block;
   padding: 0.7rem 1.5rem;
   background-color: var(--primary);
-  color: #ffffff;
+  color: var(--white);
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.9rem;
@@ -290,7 +301,7 @@ input[type="submit"]:focus-visible {
   outline: none;
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 
 footer {
   text-align: center;
