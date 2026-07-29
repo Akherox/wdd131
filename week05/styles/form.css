@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 :root {
   --bg: #eef1f0;
   --surface: #ffffff;
@@ -164,14 +176,14 @@ textarea:focus-visible {
 
 .stars label::before {
   content: "\2606";
-  /* empty star ☆ */
+  /* ☆ */
 }
 
 .stars input:checked~label::before,
 .stars label:hover::before,
 .stars label:hover~label::before {
   content: "\2605";
-  /* filled star ★ */
+  /* ★ */
 }
 
 .stars input:focus-visible+label {
@@ -230,7 +242,7 @@ input[type="submit"]:focus-visible {
   outline-offset: 2px;
 }
 
-/* Review page */
+/* Confirmation page */
 
 .confirmation-card {
   text-align: center;
