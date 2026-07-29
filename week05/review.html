@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted - WDD 131 - Bryan Bravo</title>
+    <meta name="description"
+        content="Confirmation page for the product review form, for WDD 131 - Dynamic Web Fundamentals, by Bryan Bravo.">
+    <meta name="author" content="Bryan Bravo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=optional"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+
+    <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+    <header class="body-header">
+        <h1>Thank You</h1>
+        <p class="subtitle">Your review has been recorded.</p>
+    </header>
+
+    <main>
+        <section class="confirmation-card">
+            <p class="counter-label">Reviews submitted on this device</p>
+            <p class="counter" id="reviewCount">0</p>
+
+            <dl class="summary" id="summaryList">
+                <!-- Populated by JavaScript from the submitted form data -->
+            </dl>
+
+            <a class="button-link" href="form.html">Submit another review</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Bryan Bravo, WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
