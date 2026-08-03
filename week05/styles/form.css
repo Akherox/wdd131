@@ -27,6 +27,7 @@
   --primary-hover: #0b3d26;
   --focus-ring: #1a73e8;
   --white: #ffffff;
+  --required: #b3261e;
 
   --font-display: "Libre Franklin", sans-serif;
   --font-body: "Source Sans 3", sans-serif;
@@ -108,6 +109,18 @@ legend {
   font-weight: 400;
   color: var(--text-muted);
   font-size: 0.82rem;
+}
+
+.required-mark {
+  color: var(--required);
+  font-weight: 700;
+  margin-left: 0.15rem;
+}
+
+.form-note {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Inputs */
