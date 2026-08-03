@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelKeeper - Movies</title>
+    <meta name="description"
+        content="A list of animated movies I like, with a filter by genre and my own short comments.">
+    <meta name="author" content="Bryan Bravo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@600;700&display=optional"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-large.css">
+
+    <script src="scripts/movies-data.js" defer></script>
+    <script src="scripts/movies.js" defer></script>
+    <script src="scripts/common.js" defer></script>
+</head>
+
+<body>
+    <header class="body-header">
+        <a href="index.html" class="logo">&#127909; ReelKeeper</a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+            <span class="visually-hidden">Toggle navigation</span>
+        </button>
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="movies.html" aria-current="page">Movies</a>
+            <a href="watchlist.html">Watchlist</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <div class="section-heading">
+                    <h1>Movies</h1>
+                </div>
+                <p>Animated movies I like, with my own short comments. Use the buttons to filter by genre.</p>
+
+                <div class="filter-bar" id="filterBar" role="group" aria-label="Filter movies by genre"></div>
+
+                <div class="movie-grid" id="movieGrid"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> ReelKeeper, Bryan Bravo &middot; <a
+                href="references.html">References</a>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

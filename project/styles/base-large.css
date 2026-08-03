@@ -1,0 +1,41 @@
+@media (min-width: 48em) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .primary-nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    border-bottom: none;
+    padding: 0;
+    gap: 1.75rem;
+    max-height: none;
+    overflow: visible;
+    visibility: visible;
+  }
+
+  .primary-nav a {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .hero img {
+    max-height: 340px;
+  }
+
+  .hero-caption h1 {
+    font-size: 2.3rem;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 75em) {
+  .movie-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

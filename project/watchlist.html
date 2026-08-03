@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelKeeper - Watchlist</title>
+    <meta name="description" content="Save animated movies you want to watch. The list stays saved in your browser.">
+    <meta name="author" content="Bryan Bravo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@600;700&display=optional"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-large.css">
+
+    <script src="scripts/movies-data.js" defer></script>
+    <script src="scripts/watchlist.js" defer></script>
+    <script src="scripts/common.js" defer></script>
+</head>
+
+<body>
+    <header class="body-header">
+        <a href="index.html" class="logo">&#127909; ReelKeeper</a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+            <span class="visually-hidden">Toggle navigation</span>
+        </button>
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="watchlist.html" aria-current="page">Watchlist</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h1>My Watchlist</h1>
+                <p>Save a movie you want to watch later. The list stays in this browser, so it will be here next
+                    time you visit.</p>
+
+                <form class="watchlist-form" id="watchlistForm">
+                    <p class="hint">Fields marked with <span class="required-mark" aria-hidden="true">*</span> are
+                        required.</p>
+
+                    <div class="field">
+                        <label for="watchTitle">Movie Title <span class="required-mark"
+                                aria-hidden="true">*</span></label>
+                        <select id="watchTitle" name="watchTitle" required>
+                            <option value="" disabled selected>Select a movie ...</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="watchNote">Note <span class="hint">(optional)</span></label>
+                        <input type="text" id="watchNote" name="watchNote" placeholder="e.g. Recommended by a friend">
+                    </div>
+
+                    <input type="submit" value="Add to Watchlist">
+                </form>
+
+                <ul class="watchlist-list" id="watchlistList" aria-label="Saved movies"></ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> ReelKeeper, Bryan Bravo &middot; <a
+                href="references.html">References</a>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

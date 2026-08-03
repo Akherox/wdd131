@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelKeeper - Home</title>
+    <meta name="description"
+        content="ReelKeeper is my personal site about animated movies I love, with a watchlist for movies I want to see.">
+    <meta name="author" content="Bryan Bravo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@600;700&display=optional"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-large.css">
+
+    <script src="scripts/movies-data.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+    <script src="scripts/common.js" defer></script>
+</head>
+
+<body>
+    <header class="body-header">
+        <a href="index.html" class="logo">&#127909; ReelKeeper</a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+            <span class="visually-hidden">Toggle navigation</span>
+        </button>
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="watchlist.html">Watchlist</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero-banner.svg" alt="Illustration of a film reel and filmstrip" width="1200" height="400">
+            <div class="hero-caption">
+                <h1>Hi, I'm Bryan. I love animated movies.</h1>
+                <p>This site is where I keep my favorite animated movies and a watchlist for the ones I still want to
+                    watch.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="section">
+                <div class="section-heading">
+                    <h2>My Favorite Movies</h2>
+                    <a href="movies.html">See all movies &rarr;</a>
+                </div>
+                <div class="movie-grid" id="featuredGrid"></div>
+            </section>
+
+            <section class="section">
+                <h2>About This Site</h2>
+                <p>
+                    I watch a lot of animated movies in my free time, so I made this site to keep track of my
+                    favorites. Every movie has a short comment in my own words, not a copied review. On the
+                    <a href="watchlist.html">Watchlist</a> page, you can save movies to watch later. The list stays
+                    saved in your browser, so it is still there the next time you visit.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> ReelKeeper, Bryan Bravo &middot; <a
+                href="references.html">References</a>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
