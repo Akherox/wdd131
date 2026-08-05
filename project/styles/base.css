@@ -9,6 +9,8 @@
   --surface: #232323;
   --cream: #f5f2ea;
   --cinema-red: #f13c50;
+  --cinema-red-light: #ff6b80;
+  --cinema-red-deep: #c42a3d;
   --marquee-gold: #e8b923;
   --muted-text: #b5b2aa;
   --overlay-subtle: rgba(255, 255, 255, 0.05);
@@ -185,7 +187,8 @@ textarea:focus-visible {
   input[type="submit"],
   select,
   .movie-card-skeleton .skeleton-block,
-  .movie-card-skeleton .skeleton-line {
+  .movie-card-skeleton .skeleton-line,
+  .rate-star-btn {
     transition: none;
     animation: none;
   }
@@ -380,7 +383,7 @@ main {
 }
 
 .movie-card-body h3 {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .movie-meta {
@@ -391,6 +394,13 @@ main {
 .movie-rating {
   color: var(--marquee-gold);
   font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.movie-rating-empty {
+  color: var(--muted-text);
+  font-weight: 400;
+  font-style: italic;
   font-size: 0.9rem;
 }
 
@@ -427,8 +437,8 @@ main {
 }
 
 .filter-btn[aria-pressed="true"] {
-  background-color: var(--cinema-red);
-  border-color: var(--cinema-red);
+  background-color: var(--cinema-red-deep);
+  border-color: var(--cinema-red-deep);
   color: var(--cream);
   font-weight: 600;
 }
@@ -459,7 +469,7 @@ legend {
 }
 
 .required-mark {
-  color: var(--cinema-red);
+  color: var(--cinema-red-light);
   font-weight: 700;
   margin-left: 0.1rem;
 }
@@ -497,7 +507,7 @@ select.is-selected {
 .button,
 input[type="submit"] {
   display: inline-block;
-  background-color: var(--cinema-red);
+  background-color: var(--cinema-red-deep);
   color: var(--cream);
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 600;
@@ -512,7 +522,7 @@ input[type="submit"] {
 
 .button:hover,
 input[type="submit"]:hover {
-  background-color: #d62e42;
+  background-color: #a3212f;
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(241, 60, 80, 0.35);
 }
@@ -528,7 +538,7 @@ input[type="submit"]:hover {
 }
 
 .watchlist-form h2 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   margin-bottom: 0.9rem;
 }
 
@@ -566,7 +576,7 @@ input[type="submit"]:hover {
 }
 
 .watchlist-item.is-watched {
-  opacity: 0.65;
+  border-color: var(--marquee-gold);
 }
 
 .watchlist-item-info {
@@ -577,13 +587,35 @@ input[type="submit"]:hover {
   font-weight: 600;
 }
 
-.watchlist-item.is-watched .watchlist-item-title {
-  text-decoration: line-through;
-}
-
 .watchlist-item-note {
   color: var(--muted-text);
   font-size: 0.85rem;
+}
+
+.rate-stars {
+  display: flex;
+  gap: 0.2rem;
+  margin-top: 0.4rem;
+}
+
+.rate-star-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.1rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--border-subtle);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.rate-star-btn:hover {
+  color: var(--marquee-gold);
+  transform: scale(1.15);
+}
+
+.rate-star-btn.is-filled {
+  color: var(--marquee-gold);
 }
 
 .watchlist-actions {
@@ -609,7 +641,7 @@ input[type="submit"]:hover {
 
 .icon-btn.remove {
   border-color: var(--cinema-red);
-  color: var(--cinema-red);
+  color: var(--cinema-red-light);
 }
 
 /* Footer */

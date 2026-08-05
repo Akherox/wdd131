@@ -8,8 +8,13 @@ function renderMovies(list) {
   }
 
   movieGrid.innerHTML = list
-    .map(
-      (movie) => `
+    .map((movie) => {
+      const myRating = getMyRating(movie.slug);
+      const ratingMarkup = myRating
+        ? `<p class="movie-rating">&#9733; ${myRating.toFixed(1)} / 5 <span class="hint">(your rating)</span></p>`
+        : `<p class="movie-rating movie-rating-empty">Not rated yet</p>`;
+
+      return `
         <article class="movie-card">
           <div class="movie-card-poster">
             <img src="${getPosterUrl(movie)}" alt="${movie.title} poster" loading="lazy" width="400" height="600">
@@ -18,12 +23,12 @@ function renderMovies(list) {
           <div class="movie-card-body">
             <h3>${movie.title}</h3>
             <p class="movie-meta">${movie.genre} &middot; ${movie.year}</p>
-            <p class="movie-rating">&#9733; ${movie.rating.toFixed(1)} / 5</p>
+            ${ratingMarkup}
             <p class="movie-blurb">${movie.blurb}</p>
           </div>
         </article>
-      `
-    )
+      `;
+    })
     .join('');
 }
 

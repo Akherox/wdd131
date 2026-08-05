@@ -4,84 +4,107 @@ const movies = [
     title: 'Wreck-It Ralph',
     year: 2012,
     genre: 'Comedy',
-    rating: 4.8,
-    favorite: true,
-    blurb: 'Ralph is a video game villain who wants to be a hero. I love how the movie mixes different game worlds and still feels like one story.',
+    blurb: 'A video game villain leaves his arcade cabinet, hoping to prove he can be a hero.',
   },
   {
     slug: 'httyd2',
     title: 'How to Train Your Dragon 2',
     year: 2014,
     genre: 'Adventure',
-    rating: 4.9,
-    favorite: true,
-    blurb: 'Hiccup and Toothless are older now, and the story gets bigger and more emotional. The dragons look amazing, and the ending always gets me.',
+    blurb: 'Hiccup and Toothless discover a hidden world of dragons and face a growing threat to their home.',
   },
   {
     slug: 'big-hero-6',
     title: 'Big Hero 6',
     year: 2014,
     genre: 'Action',
-    rating: 4.7,
-    favorite: true,
-    blurb: 'Hiro builds a team of young heroes with his robot friend Baymax. It is funny and sad at the same time, and it has a lot of heart.',
+    blurb: 'A young robotics prodigy forms a superhero team with his inflatable robot, Baymax.',
   },
   {
     slug: 'coco',
     title: 'Coco',
     year: 2017,
     genre: 'Family',
-    rating: 4.6,
-    favorite: false,
-    blurb: 'A boy named Miguel travels to the Land of the Dead to learn about his family. The music and colors make this movie really special.',
+    blurb: 'A boy is transported to the Land of the Dead, where he uncovers his family\u2019s forgotten history.',
   },
   {
     slug: 'zootopia',
     title: 'Zootopia',
     year: 2016,
     genre: 'Comedy',
-    rating: 4.4,
-    favorite: false,
-    blurb: 'A rabbit and a fox solve a mystery in a city full of animals. It is funny but also talks about real problems, like judging people too fast.',
+    blurb: 'A rookie rabbit officer and a con-artist fox uncover a conspiracy in a city of anthropomorphic animals.',
   },
   {
     slug: 'klaus',
     title: 'Klaus',
     year: 2019,
     genre: 'Family',
-    rating: 4.3,
-    favorite: false,
-    blurb: 'A postman in a cold town accidentally starts a new Santa Claus tradition. It is a simple story, but it made me smile a lot.',
+    blurb: 'A postman in a remote arctic town accidentally starts a Christmas tradition with a reclusive toymaker.',
   },
   {
     slug: 'spider-verse',
     title: 'Spider-Man: Into the Spider-Verse',
     year: 2018,
     genre: 'Action',
-    rating: 4.7,
-    favorite: false,
-    blurb: 'Miles Morales becomes Spider-Man in a world with many different Spider-People. The art style is unlike any other animated movie I have seen.',
+    blurb: 'Miles Morales becomes Spider-Man and meets alternate versions of the hero from other dimensions.',
   },
   {
     slug: 'moana',
     title: 'Moana',
     year: 2016,
     genre: 'Adventure',
-    rating: 4.5,
-    favorite: false,
-    blurb: 'Moana sails the ocean to save her island, with help from a demigod named Maui. Great music and a strong main character.',
+    blurb: 'A chief\u2019s daughter sails across the Pacific with a demigod to save her island.',
   },
   {
     slug: 'iron-giant',
     title: 'The Iron Giant',
     year: 1999,
     genre: 'Family',
-    rating: 4.2,
-    favorite: false,
-    blurb: 'A giant robot falls from the sky and becomes friends with a young boy. It is an older movie, but the story still feels powerful today.',
+    blurb: 'A boy befriends a giant robot from outer space during the Cold War.',
   },
 ];
 
 function getPosterUrl(movie) {
   return `images/${movie.slug}.jpg`;
 }
+
+const MY_MOVIES_KEY = 'reelkeeper-mymovies';
+
+const DEFAULT_MY_MOVIES = [
+  { slug: 'wreck-it-ralph', note: 'One of my all-time favorites.', myRating: 5 },
+  { slug: 'httyd2', note: 'The dragons still get me every time.', myRating: 5 },
+  { slug: 'big-hero-6', note: 'Baymax is the best.', myRating: 4.5 },
+];
+
+function getMyMovies() {
+  const stored = localStorage.getItem(MY_MOVIES_KEY);
+  return stored ? JSON.parse(stored) : [];
+}
+
+function saveMyMovies(list) {
+  localStorage.setItem(MY_MOVIES_KEY, JSON.stringify(list));
+}
+
+function ensureSeedData() {
+  if (localStorage.getItem(MY_MOVIES_KEY)) return;
+
+  const now = new Date().toISOString();
+  const seeded = DEFAULT_MY_MOVIES.map((entry, index) => ({
+    id: `seed-${index}`,
+    slug: entry.slug,
+    note: entry.note,
+    watched: true,
+    myRating: entry.myRating,
+    dateAdded: now,
+    dateWatched: now,
+  }));
+
+  saveMyMovies(seeded);
+}
+
+function getMyRating(slug) {
+  const entry = getMyMovies().find((m) => m.slug === slug && m.watched && m.myRating);
+  return entry ? entry.myRating : null;
+}
+
+ensureSeedData();
