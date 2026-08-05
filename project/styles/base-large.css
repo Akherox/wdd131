@@ -21,8 +21,8 @@
     border-bottom: none;
   }
 
-  .hero img {
-    max-height: 340px;
+  .hero {
+    min-height: 440px;
   }
 
   .hero-caption h1 {

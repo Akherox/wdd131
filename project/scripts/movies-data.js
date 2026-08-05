@@ -82,15 +82,6 @@ const movies = [
   },
 ];
 
-const posterColorsByGenre = {
-  Comedy: ['2a1f33', 'f13c50'],
-  Adventure: ['1f2933', 'e8b923'],
-  Action: ['101820', '3fa7d6'],
-  Family: ['1a2a1f', 'e8b923'],
-};
-
 function getPosterUrl(movie) {
-  const [bg, fg] = posterColorsByGenre[movie.genre] || ['232323', 'e8b923'];
-  const label = encodeURIComponent(movie.title);
-  return `https://placehold.co/400x600/${bg}/${fg}?font=oswald&text=${label}`;
+  return `images/${movie.slug}.jpg`;
 }

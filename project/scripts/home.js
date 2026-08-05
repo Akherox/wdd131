@@ -4,11 +4,13 @@ function renderFeatured() {
   const featured = movies.filter((movie) => movie.favorite);
 
   featuredGrid.innerHTML = featured
-    .map(
-      (movie) => `
+    .map((movie, index) => {
+      const loadingAttrs = index === 0 ? 'fetchpriority="high"' : '';
+
+      return `
         <article class="movie-card">
           <div class="movie-card-poster">
-            <img src="${getPosterUrl(movie)}" alt="${movie.title} poster (temporary placeholder)" loading="lazy" width="400" height="600">
+            <img src="${getPosterUrl(movie)}" alt="${movie.title} poster" ${loadingAttrs} width="400" height="600">
           </div>
           <div class="ticket-divider" aria-hidden="true"></div>
           <div class="movie-card-body">
@@ -18,8 +20,8 @@ function renderFeatured() {
             <p class="movie-blurb">${movie.blurb}</p>
           </div>
         </article>
-      `
-    )
+      `;
+    })
     .join('');
 }
 

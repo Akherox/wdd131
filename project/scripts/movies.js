@@ -12,7 +12,7 @@ function renderMovies(list) {
       (movie) => `
         <article class="movie-card">
           <div class="movie-card-poster">
-            <img src="${getPosterUrl(movie)}" alt="${movie.title} poster (temporary placeholder)" loading="lazy" width="400" height="600">
+            <img src="${getPosterUrl(movie)}" alt="${movie.title} poster" loading="lazy" width="400" height="600">
           </div>
           <div class="ticket-divider" aria-hidden="true"></div>
           <div class="movie-card-body">

@@ -43,20 +43,25 @@
                     time you visit.</p>
 
                 <form class="watchlist-form" id="watchlistForm">
+                    <h2>Add a Movie</h2>
+                    <div class="ticket-divider" aria-hidden="true"></div>
                     <p class="hint">Fields marked with <span class="required-mark" aria-hidden="true">*</span> are
                         required.</p>
 
-                    <div class="field">
-                        <label for="watchTitle">Movie Title <span class="required-mark"
-                                aria-hidden="true">*</span></label>
-                        <select id="watchTitle" name="watchTitle" required>
-                            <option value="" disabled selected>Select a movie ...</option>
-                        </select>
-                    </div>
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="watchTitle">Movie Title <span class="required-mark"
+                                    aria-hidden="true">*</span></label>
+                            <select id="watchTitle" name="watchTitle" required>
+                                <option value="" disabled selected>Select a movie ...</option>
+                            </select>
+                        </div>
 
-                    <div class="field">
-                        <label for="watchNote">Note <span class="hint">(optional)</span></label>
-                        <input type="text" id="watchNote" name="watchNote" placeholder="e.g. Recommended by a friend">
+                        <div class="field">
+                            <label for="watchNote">Note <span class="hint">(optional)</span></label>
+                            <input type="text" id="watchNote" name="watchNote"
+                                placeholder="e.g. Recommended by a friend">
+                        </div>
                     </div>
 
                     <input type="submit" value="Add to Watchlist">
